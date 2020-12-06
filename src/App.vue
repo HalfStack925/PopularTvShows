@@ -3,7 +3,7 @@
     
     <!--imports header attribute -->
     <Header headerTitle="Popular TV Shows"/>
-    <Card title="movies.name" v-bind:movies="movies"/>
+    <Card v-bind:movies="movies"/>
   </div>
 </template>
 
@@ -27,14 +27,7 @@ export default {
   data()
   {
     return{ 
-     movies:[
-       {id:1, title:"movies.name"}
-      // {id:2, title: movies.name, img: movies.poster_path, description: movies.overview},
-       //{id:3, title: movies.name, img: movies.poster_path, description: movies.overview},
-       //{id:4, title: movies.name, img: movies.poster_path, description: movies.overview}
-
-       
-     ]
+     movies:[]
     }
   },
  mounted()
