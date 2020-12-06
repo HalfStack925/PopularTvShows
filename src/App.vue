@@ -4,6 +4,7 @@
     <!--imports header attribute -->
     <Header headerTitle="Popular TV Shows"/>
     <Card v-bind:movies="movies"/>
+    
   </div>
 </template>
 
