@@ -3,7 +3,7 @@
     
     <!--imports header attribute -->
     <Header headerTitle="Popular TV Shows"/>
-    <Card v-bind:movies="movies"/>
+    <Card v-bind:shows="shows"/>
     
   </div>
 </template>
@@ -18,7 +18,7 @@ import Card from './components/Card.vue'
 import axios from 'axios'
 
 
-//adds header to componets to be exported to app.vue
+//adds componets to be exported to app.vue
 export default {
   name: 'App',
   components: {
@@ -28,7 +28,7 @@ export default {
   data()
   {
     return{ 
-     movies:[]
+     shows:[]
     }
   },
  mounted()
@@ -37,8 +37,8 @@ export default {
     // saves object as res
     axios.get('https://api.themoviedb.org/3/tv/popular?api_key=099fb9a4f570109a23e62c114190f40d&language=en-US&page=1')
     .then( (res) => {
-      this.movies = res.data.results;
-      this.movies.splice(4)
+      this.shows = res.data.results;
+      this.shows.splice(4)
 
     })
   }

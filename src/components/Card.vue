@@ -1,27 +1,42 @@
 <template>
-    <div>
-    
-     <h3 v-for="movie in movies" :key="movie.id"> 
-         <img v-bind:src="'http://image.tmdb.org/t/p/w500/'+ movie.poster_path">
+<!--
+    uses v-for to loop through tv shows
+--->
+    <div class="card">
+     <h3 v-for="show in shows" :key="show.id"> 
+         <img v-bind:src="'http://image.tmdb.org/t/p/w500/'+ show.poster_path" >
          <br>
-     {{movie.name}}
+     {{show.name}}
      <br>
-     {{movie.overview}}
-        <br>   
-        <br>
-        
+    {{show.overview}}
     </h3>
-
-   
-  
-    
-     
-     </div>
+    </div>
 </template>
 
 <script>
 export default {
     name:"Card",
-    props: ['movies']
+    props: ['shows']
 }
 </script>
+
+<style scoped>
+.card {
+    margin:auto;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    
+}
+h3{
+    text-align: center;
+}   
+
+img{
+    width: 15rem;
+    }
+
+
+
+</style>
