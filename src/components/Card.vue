@@ -1,6 +1,6 @@
 <template>
 <!--
-    uses v-for to loop through tv shows
+    uses v-for to loop through tv shows, displaying image, name and description
 --->
     <div class="card">
      <h3 v-for="show in shows" :key="show.id"> 

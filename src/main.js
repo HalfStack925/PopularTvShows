@@ -1,3 +1,11 @@
+/*
+  Title: Popular TV Shows
+  Developer: Mike Winchel
+  Date: 12/6/2020
+  Purpose: To display popular
+  tv shows from api using Vue CLI
+*/
+
 import Vue from 'vue'
 import App from './App.vue'
 import 'bootstrap'

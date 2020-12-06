@@ -38,6 +38,7 @@ export default {
     axios.get('https://api.themoviedb.org/3/tv/popular?api_key=099fb9a4f570109a23e62c114190f40d&language=en-US&page=1')
     .then( (res) => {
       this.shows = res.data.results;
+      //use splice to only show 4 tv shows
       this.shows.splice(4)
 
     })
